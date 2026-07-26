@@ -169,5 +169,26 @@ Buy Now
 
 </footer>
 
-</body>
+<script>
+document.querySelectorAll("button").forEach(btn=>{
+btn.onclick=function(){
+
+let name=prompt("আপনার নাম লিখুন");
+if(!name) return;
+
+let phone=prompt("মোবাইল নম্বর লিখুন");
+if(!phone) return;
+
+let address=prompt("ঠিকানা লিখুন");
+if(!address) return;
+
+alert(
+"ধন্যবাদ "+name+
+"!\n\nআপনার অর্ডার গ্রহণ করা হয়েছে।\n\nফোন: "+phone+
+"\nঠিকানা: "+address
+);
+
+}
+});
+</script></body>
 </html>
