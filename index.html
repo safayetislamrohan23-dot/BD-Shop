@@ -3,55 +3,87 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BD-Shop</title>
+<title>BD Shop</title>
 
 <style>
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
-background:#f4f4f4;
+}
+
+body{
+background:#f5f5f5;
 }
 
 header{
-background:#008000;
-color:white;
-padding:20px;
-text-align:center;
-}
-
-.products{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-padding:20px;
-}
-
-.card{
-background:white;
-width:220px;
-margin:15px;
+background:#0f172a;
 padding:15px;
-border-radius:10px;
-box-shadow:0 0 10px rgba(0,0,0,.2);
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:white;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#22c55e;
+}
+
+.search{
+width:50%;
+}
+
+.search input{
+width:100%;
+padding:12px;
+border:none;
+border-radius:8px;
+font-size:16px;
+}
+
+.hero{
+background:linear-gradient(135deg,#16a34a,#22c55e);
+color:white;
+padding:60px 20px;
 text-align:center;
 }
 
-.card img{
+.hero h1{
+font-size:40px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+.btn{
+display:inline-block;
+margin-top:25px;
+padding:14px 28px;
+background:white;
+color:#16a34a;
+text-decoration:none;
+border-radius:8px;
+font-weight:bold;
+}
+
+@media(max-width:700px){
+header{
+flex-direction:column;
+gap:15px;
+}
+
+.search{
 width:100%;
-border-radius:10px;
 }
 
-button{
-background:#008000;
-color:white;
-border:none;
-padding:10px 20px;
-border-radius:5px;
-cursor:pointer;
+.hero h1{
+font-size:28px;
 }
-
-button:hover{
-background:#006400;
 }
 </style>
 </head>
@@ -59,27 +91,20 @@ background:#006400;
 <body>
 
 <header>
-<h1>BD-Shop</h1>
-<p>Welcome to our online shop</p>
+<div class="logo">BD Shop</div>
+
+<div class="search">
+<input type="text" placeholder="Search products...">
+</div>
 </header>
 
-<div class="products">
+<section class="hero">
+<h1>Welcome to BD Shop</h1>
+<p>বাংলাদেশের বিশ্বস্ত অনলাইন শপ</p>
 
-<div class="card">
-<img src="https://via.placeholder.com/200" alt="">
-<h3>Sample Product</h3>
-<p>Price: 500 Tk</p>
-<button>Buy Now</button>
-</div>
+<a href="#" class="btn">Shop Now</a>
 
-<div class="card">
-<img src="https://via.placeholder.com/200" alt="">
-<h3>Sample Product 2</h3>
-<p>Price: 700 Tk</p>
-<button>Buy Now</button>
-</div>
-
-</div>
+</section>
 
 </body>
-  </html>
+</html>
